@@ -3,8 +3,9 @@ import './App.css';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 //Components
-import Header from './containers/Header/Header';
-import Footer from './containers/Footer/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import NotFound from './components/404/NotFound';
 
 //Pages
 import Home from'./pages/home/Home';
@@ -12,7 +13,6 @@ import Login from'./pages/login/Login';
 import Signup from'./pages/signup/Signup';
 
 class App extends React.Component {
-
   render() {
     return (
       <div className="App">
@@ -22,6 +22,7 @@ class App extends React.Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
+              <Route path='*' component={NotFound} />
             </Switch>
           <Footer/>   {/*    Footer   */}
         </Router>

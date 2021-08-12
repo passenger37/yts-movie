@@ -1,0 +1,5 @@
+.movie-cards{
+    display:flex;
+    overflow: auto;
+    white-space: nowrap;
+}
