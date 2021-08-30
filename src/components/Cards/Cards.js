@@ -1,6 +1,6 @@
 import React ,{Fragment} from 'react';
 import {NavLink} from 'react-router-dom';
-import './Trending.css';
+import './Cards.css';
 
 // Components
 import SingleCard from '../SingleCard/SingleCard';
@@ -12,7 +12,7 @@ class Trending extends React.Component{
         const Cards=(
             <div className="movie-cards">
                     {
-                        this.props.TrendingData.map(val=>{
+                        this.props.data.map(val=>{
                             return( 
                                 <NavLink exact to={{ 
                                     pathname:'/media/'+val.id, 

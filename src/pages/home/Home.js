@@ -5,8 +5,8 @@ import './Home.css';
 
 // components
 import Search from '../../components/Search/Search';
-import Trending from '../../components/Trending/Trending';
-import UpcomingMovie from '../../components/Upcoming/Upcoming';
+import Cards from '../../components/Cards/Cards';
+// import UpcomingMovie from '../../components/Upcoming/Upcoming';
 
 class Home extends React.Component{
 
@@ -75,12 +75,14 @@ class Home extends React.Component{
                 <Search
                     searchResults={this.state.searchResults}
                     remove={this.removeData}/>
-                <Trending
+                <h1>Trending Data...</h1>
+                <Cards
                     class={this.hideClassName}
-                    TrendingData={this.state.TrendingData}/>
-                <UpcomingMovie
+                    data={this.state.TrendingData}/>
+                <h1>UpcomingMovie Data...</h1>
+                <Cards
                     class={this.hideClassName}
-                    UpcomingMovie={this.state.UpcomingMovie}/>
+                    data={this.state.UpcomingMovie}/>
             </div>
         )
     }
