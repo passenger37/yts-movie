@@ -20,19 +20,20 @@ class Trending extends React.Component{
                                     key={val.id}>
                                     <SingleCard
                                         key={val.id}
-                                        title={val.original_title || val.title}
+                                        title={val.original_title || val.title || val.name}
                                         overview={val.overview}
                                         rating={val.vote_average}
                                         type={val.media_type}
-                                        release_date={val.release_date}
-                                        poster={val.poster_path} />
+                                        release_date={val.release_date || val.first_air_date}
+                                        poster={val.poster_path} 
+                                        />
                                 </NavLink>)
                             })
                     }
                 </div>
         );
 
-        console.log('this is Trending',this.props.TrendingData);
+        // console.log('this is Trending',this.props.TrendingData);
         return (
             <div className={this.props.class}>
                 {Cards}

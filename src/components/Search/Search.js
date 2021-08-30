@@ -12,7 +12,7 @@ class Search extends React.Component{
     }
     
     render() {
-        console.log('Search REasult..',this.props.searchResults);
+        // console.log('Search REasult..',this.props.searchResults);
         const Cards=(
             // <div className="movie-cards">
             <div>

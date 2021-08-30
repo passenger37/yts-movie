@@ -19,6 +19,8 @@ class Home extends React.Component{
         UpcomingMovie:[],
         TrendingData:[],
         searchResults:[],
+        tvToprated:[],
+        tvPopular:[],
         typingTimeout: 0,
         typing:false,
     }
@@ -27,8 +29,6 @@ class Home extends React.Component{
     componentDidMount(){
         axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
         .then(res=>{
-            console.log('????????');
-            console.log(res);
                 this.setState({UpcomingMovie:res.data.results});
         });
 
@@ -36,6 +36,20 @@ class Home extends React.Component{
         .then(res=>{
             this.setState({
                 TrendingData:res.data.results,
+            });
+        });
+
+        axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_API_KEY}`)
+        .then(res=>{
+            this.setState({
+                tvToprated:res.data.results,
+            });
+        });
+
+        axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}`)
+        .then(res=>{
+            this.setState({
+                tvPopular: res.data.results,
             });
         });
     }
@@ -46,8 +60,6 @@ class Home extends React.Component{
         this.state.typingTimeout= setTimeout(() => {
           axios.get(`https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&query=${event.target.value}&page=1`)
           .then(res=>{
-              console.log('this is Search...')
-              console.log('this is Search...',res.data.results);
               this.setState({
                   searchResults: res.data.results,
                 })
@@ -66,9 +78,14 @@ class Home extends React.Component{
               });
         }
     }
-    // https://api.themoviedb.org/3/tv/top_rated?api_key=ba21b5373a69c95d62db0cbfd7d4b67d&language=en-US&page=1
 
     render(){
+
+
+        console.log('==============================');
+        console.log(this.state.tvLatest);
+        console.log('==============================');
+        console.log(this.state.tvToprated);
         
         return(
             <div className="home">
@@ -83,6 +100,14 @@ class Home extends React.Component{
                 <Cards
                     class={this.hideClassName}
                     data={this.state.UpcomingMovie}/>
+                <h1>Top rated tv this week</h1>
+                <Cards
+                    class={this.hideClassName}
+                    data={this.state.tvToprated}/>
+                <h1>Top tv popular</h1>
+                <Cards
+                    class={this.hideClassName}
+                    data={this.state.tvPopular}/>
             </div>
         )
     }
