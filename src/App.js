@@ -11,6 +11,8 @@ import NotFound from './components/404/NotFound';
 import Home from'./pages/home/Home';
 import Login from'./pages/login/Login';
 import Signup from'./pages/signup/Signup';
+import movieDetail from'./pages/movieDetail/movieDetail';
+
 
 class App extends React.Component {
   render() {
@@ -22,6 +24,7 @@ class App extends React.Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
+              <Route exact path='/media/:id' component={movieDetail} />
               <Route path='*' component={NotFound} />
             </Switch>
           <Footer/>   {/*    Footer   */}

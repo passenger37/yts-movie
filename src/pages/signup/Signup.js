@@ -144,7 +144,7 @@ class Signup extends React.Component{
                     invalid={!FormElement.config.valid}
                     />))
             }
-            <Button class="login_btn" btnType="submit">Login</Button>
+            <Button class="btn" btnType="submit">Login</Button>
         </form>
         );
 

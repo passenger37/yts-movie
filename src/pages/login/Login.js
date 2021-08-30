@@ -98,17 +98,17 @@ class login extends React.Component{
             {
                 FormElemntArray.map(FormElement => (
                     <Input
-                    key={FormElement.id}
-                    elementType={FormElement.config.elementType}
-                    elementConfig={FormElement.config.elementConfig}
-                    value={FormElement.config.value}
-                    touched={FormElement.config.touched}
-                    shouldValidate={FormElement.config.validation}
-                    change={(event)=>this.inputChangeHandler(event,FormElement.id)}
-                    invalid={!FormElement.config.valid}
+                        key={FormElement.id}
+                        elementType={FormElement.config.elementType}
+                        elementConfig={FormElement.config.elementConfig}
+                        value={FormElement.config.value}
+                        touched={FormElement.config.touched}
+                        shouldValidate={FormElement.config.validation}
+                        change={(event)=>this.inputChangeHandler(event,FormElement.id)}
+                        invalid={!FormElement.config.valid}
                     />))
             }
-            <Button class="login_btn" btnType="submit">Login</Button>
+            <Button class="btn" btnType="submit">Login</Button>
         </form>
         );
 
