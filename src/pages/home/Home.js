@@ -82,9 +82,9 @@ class Home extends React.Component{
     render(){
 
 
-        console.log('==============================');
+        // console.log('==============================');
         console.log(this.state.tvLatest);
-        console.log('==============================');
+        // console.log('==============================');
         console.log(this.state.tvToprated);
         
         return(
@@ -92,19 +92,19 @@ class Home extends React.Component{
                 <Search
                     searchResults={this.state.searchResults}
                     remove={this.removeData}/>
-                <h1>Trending Data...</h1>
+                <h1>Trending Movie...</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.TrendingData}/>
-                <h1>UpcomingMovie Data...</h1>
+                <h1>Upcoming Movie...</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.UpcomingMovie}/>
-                <h1>Top rated tv this week</h1>
+                <h1>Top rated Tv this week</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.tvToprated}/>
-                <h1>Top tv popular</h1>
+                <h1>Top Tv popular</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.tvPopular}/>
