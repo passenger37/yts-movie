@@ -30,7 +30,10 @@ class Home extends React.Component{
     componentDidMount(){
         axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
         .then(res=>{
-                this.setState({UpcomingMovie:res.data.results});
+            console.log(res);
+                this.setState({
+                    UpcomingMovie:res.data.results
+                });
         });
 
         axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}`)
@@ -93,19 +96,19 @@ class Home extends React.Component{
                 <Search
                     searchResults={this.state.searchResults}
                     remove={this.removeData}/>
-                <h1>Trending Movie...</h1>
+                <h1 className={this.hideClassName}>Trending</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.TrendingData}/>
-                <h1>Upcoming Movie...</h1>
+                <h1 className={this.hideClassName}>Upcoming</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.UpcomingMovie}/>
-                <h1>Top rated Tv this week</h1>
+                <h1 className={this.hideClassName}>Top rated Tv this week</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.tvToprated}/>
-                <h1>Top Tv popular</h1>
+                <h1 className={this.hideClassName}>Top Tv popular</h1>
                 <Cards
                     class={this.hideClassName}
                     data={this.state.tvPopular}/>

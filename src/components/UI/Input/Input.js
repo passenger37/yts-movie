@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import   './Input.css'
+import './Input.css';
 
 const Input=(props)=>{
 
@@ -7,7 +7,6 @@ const Input=(props)=>{
     const inputClasses = ['form_input'];
     
     if (props.invalid && props.shouldValidate && props.touched) {
-        console.log(props.invalid && props.shouldValidate && props.touched,'>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
         inputClasses.push('invalid');
     }
 
@@ -42,6 +41,7 @@ const Input=(props)=>{
         <Fragment>
             <div className="form_group">
                 {inputElement}
+                {console.log( props.placeholder)}
                 <label>{props.elementConfig.placeholder}</label>
             </div>
         </Fragment>

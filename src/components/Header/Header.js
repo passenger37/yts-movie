@@ -9,8 +9,11 @@ class header extends React.Component{
       <Fragment >
         <div className='header-container'>
           <NavLink to="/" className="navlink">Logo</NavLink>
-          <NavLink to="/login" className="navlink">Login </NavLink>
-          <NavLink to="/Signup" className="navlink">Signup</NavLink>
+          <h1>YtsMovies</h1>
+          <div>
+            <NavLink to="/login" className="navlink">Login </NavLink>
+            <NavLink to="/Signup" className="navlink">Signup</NavLink>
+          </div>
         </div>
       </Fragment>
     );

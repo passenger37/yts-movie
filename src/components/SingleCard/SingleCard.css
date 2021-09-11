@@ -2,3 +2,7 @@
     text-align: center;
     margin: 0 5px;
 }
+
+.movie-card >img {
+    border-radius: 10px;
+}
