@@ -12,9 +12,7 @@ class Search extends React.Component{
     }
     
     render() {
-        // console.log('Search REasult..',this.props.searchResults);
         const Cards=(
-            // <div className="movie-cards">
             <div>
                 {
                    this.props.searchResults.map(val=>{
@@ -40,7 +38,6 @@ class Search extends React.Component{
                 <form onSubmit={this.FetchSearchData}>
                     <input type="search" onChange={this.props.remove} placeholder="Search" /> <br/>
                     <label>Search</label> 
-                    {/* <Button class="btn" btnType="submit">Search</Button> */}
                 </form>
                 {Cards}
             </div>

@@ -12,22 +12,8 @@ class Footer extends React.Component{
             <small>"Still much more to do"</small>
         </div>
         <div className="footer-2">
-          {/* <NavLink to="linkedin.com/in/anand-singh-766109174"><i className="fa fa-linkedin"></i></NavLink> <br/>
-          <NavLink to="https://github.com/passenger37" ><i className="fa fa-github"></i></NavLink> */}
-          <a href="linkedin.com/in/anand-singh-766109174"><i className="fa fa-linkedin" ></i></a> <br/> 
-           <a href="https://github.com/passenger37"><i className="fa fa-github"></i></a> 
-
-           {/* 
-           
-           TODO: External Link for linked in and github
-           
-           <Route path='/privacy-policy' component={() => { 
-     window.location.href = 'https://example.com/1234'; 
-     return null;
-}}/>
-           
-           
-           */}
+          <a href="https://linkedin.com/in/anand-singh-766109174" target="_blank"><i className="fa fa-linkedin"></i></a> <br/>
+          <a href="https://github.com/passenger37" target="_blank"><i className="fa fa-github"></i></a>
         </div>
       </div>
     );

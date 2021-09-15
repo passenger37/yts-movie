@@ -13,20 +13,15 @@ class movieDetail extends React.Component {
     }
 
     componentDidMount(){
-        // console.log('ID >>>',this.props.match.params.id);
-        // console.log('ID >>>',this.props);
-        // console.log('PROPS >>>>',this.state.props);
         if (this.props.location.state.val.media_type =='movie'){
             axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
             .then(res=>{
-                // console.log('<<<<<<<<<< this is results',res.data);
                     this.setState({movieDetail:res.data});
             });}
 
         else if  (this.props.location.state.val.media_type =='tv'){
             axios.get(`https://api.themoviedb.org/3/tv/${this.props.match.params.id}}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
             .then(res=>{
-                // console.log('<<<<<<<<<< this is results',res.data);
                     this.setState({movieDetail:res.data});
             });
         }
@@ -37,7 +32,6 @@ class movieDetail extends React.Component {
         var genre=[];
 
         for(let res in genres){
-            // console.log('<<<<<<<<>>>>>>>>',genres[res].name);
             genre.push(genres[res].name);
         }
         
@@ -52,12 +46,6 @@ class movieDetail extends React.Component {
                 }
             </div>
         )
-
-        // console.log('>>>>>>>>>>>>---',genres);
-        // console.log('>>>>>>>>>>>>+++++++---',genre);
-        // console.log('>>>>>>>>>>>>---',this.state.movieDetail.genres);
-        console.log('>>>>>>>>>>>>',this.state.movieDetail);
-        // console.log('>>>>>>>>>>>>==',this.props.location.state.val);
         return (
             <div className ='details'>
                 <img src={`${image_500}/${this.state.props.poster_path}`} alt="movie_poster"/> <br/>

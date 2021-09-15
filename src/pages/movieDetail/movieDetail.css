@@ -8,8 +8,8 @@
 }
 
 .details img{
-    width:80vw;
-    height:60vh;
+    width:60%;
+    height:80%;
     border-radius: 10px;
 }
 
@@ -43,4 +43,13 @@
 .genre >small{
     margin: 5px;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    
+    .details img{
+        width:30%;
+        height:40%;
+        border-radius: 10px;
+    }
 }

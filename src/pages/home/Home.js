@@ -7,7 +7,7 @@ import './Home.css';
 // components
 import Search from '../../components/Search/Search';
 import Cards from '../../components/Cards/Cards';
-// import UpcomingMovie from '../../components/Upcoming/Upcoming';
+
 
 class Home extends React.Component{
 
@@ -84,12 +84,6 @@ class Home extends React.Component{
     }
 
     render(){
-
-
-        // console.log('==============================');
-        console.log(this.state.tvLatest);
-        // console.log('==============================');
-        console.log(this.state.tvToprated);
         
         return(
             <div className="home">

@@ -33,7 +33,6 @@ class Trending extends React.Component{
                 </div>
         );
 
-        // console.log('this is Trending',this.props.TrendingData);
         return (
             <div className={this.props.class}>
                 {Cards}
