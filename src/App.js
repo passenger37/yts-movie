@@ -25,8 +25,6 @@ class App extends React.Component {
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/media/:id' component={movieDetail} />
-              <Route path='/linkedin' component={() => { window.location.href = 'https://linkedin.com/in/anand-singh-766109174'; return null;}}/>
-              <Route path='/git' component={() => { window.location.href = 'https://github.com/passenger37'; return null;}}/>
               <Route path='*' component={NotFound} />
             </Switch>
           <Footer/>   {/*    Footer   */}
