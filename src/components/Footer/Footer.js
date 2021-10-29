@@ -12,7 +12,7 @@ class Footer extends React.Component{
             <small>"Still much more to do"</small>
         </div>
         <div className="footer-2">
-          <a href="linkedin.com/in/akshat-mittal-4604301b6" target="_blank"><i className="fa fa-linkedin"></i></a> <br/>
+          <a href="https://linkedin.com/in/akshat-mittal-4604301b6" target="_blank"><i className="fa fa-linkedin"></i></a> <br/>
           <a href="https://github.com/drifter089" target="_blank"><i className="fa fa-github"></i></a>
         </div>
       </div>
