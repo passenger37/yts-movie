@@ -1,6 +1,7 @@
 .login{
     background:rgb(26, 84, 99);
     padding: 10px;
+    min-height: 100vh;
 }
 .login_form{
     position: relative;

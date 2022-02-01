@@ -5,7 +5,7 @@ const Input=(props)=>{
 
     let inputElement=null;
     const inputClasses = ['form_input'];
-    
+
     if (props.invalid && props.shouldValidate && props.touched) {
         inputClasses.push('invalid');
     }
@@ -27,7 +27,7 @@ const Input=(props)=>{
             onChange={props.change}
             />);
             break;
-    
+
         default:
             inputElement = (<input
             className={inputClasses.join(' ')}

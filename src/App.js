@@ -27,7 +27,7 @@ class App extends React.Component {
               <Route exact path='/media/:id' component={movieDetail} />
               <Route path='*' component={NotFound} />
             </Switch>
-          <Footer/>   {/*    Footer   */}
+          {/* <Footer/>      Footer   */}
         </Router>
       </div>
     );
