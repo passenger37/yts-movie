@@ -1,6 +1,12 @@
 .search{
     margin-top:50px;
-    padding: 10px 20px;
+     padding: 10px 20px; 
+    /* margin-bottom: 15px; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* min-height: 400px; */
+    /* -webkit-filter: blur(8px); */
+    /* background-image: url(https://image.tmdb.org/t/p/w1920_and_h600_multi_faces/sfjqJDmNqMIImO5khiddb9TARvO.jpg); */
 }
 .search >form{
     display: flex;
@@ -12,6 +18,8 @@
     border: none;
     border-bottom: 2px solid rgba(4, 60, 65, 0.863); 
     font-size:20px;
+    /* position: relative;
+    top: 200px; */
 }
 
 .search >form>input:focus{

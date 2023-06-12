@@ -34,9 +34,10 @@ class Search extends React.Component{
             </div>
         );
         return (
-            <div className='search' style={{backgroundImage: 'url("../../assests/premium_1.jpg")'}}>
+            <div className='search'>
                 <form onSubmit={this.FetchSearchData}>
-                    <input type="search" onChange={this.props.remove} placeholder="Search" /> <br/>
+                    <input type="search" onChange={this.props.remove} placeholder="Search movies,tv series,etc." /> 
+                    <br/>
                     <label>Search</label> 
                 </form>
                 {Cards}

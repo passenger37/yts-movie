@@ -4,6 +4,7 @@ import './movieDetail.css';
 
 // util
 import {image_500} from '../../util/image_config';
+import {original} from '../../util/image_config';
 
 class movieDetail extends React.Component {
 
@@ -16,6 +17,8 @@ class movieDetail extends React.Component {
         if (this.props.location.state.val.media_type =='movie'){
             axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
             .then(res=>{
+                console.log('+++++++++++++++++++++++++++++++++++++');
+                console.log(res);
                     this.setState({movieDetail:res.data});
             });}
 

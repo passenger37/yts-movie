@@ -8,6 +8,7 @@ import './Home.css';
 import Search from '../../components/Search/Search';
 import Cards from '../../components/Cards/Cards';
 
+import {image_300} from '../../util/image_config';
 
 class Home extends React.Component{
 
@@ -17,6 +18,7 @@ class Home extends React.Component{
     }
 
     state = {
+        Poster:'',
         UpcomingMovie:[],
         TrendingData:[],
         searchResults:[],
@@ -28,9 +30,16 @@ class Home extends React.Component{
     
 
     componentDidMount(){
+        const config={
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYTIxYjUzNzNhNjljOTVkNjJkYjBjYmZkN2Q0YjY3ZCIsInN1YiI6IjYxMTI3NzdmY2QyMDQ2MDA4MGVhMTk0MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.T-VvZ152yU3a55jsySZcY-EOazzsomK_ut4A6zM5_X8'
+              }
+        }
+
         axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
         .then(res=>{
-            console.log(res);
+            // console.log(res);
                 this.setState({
                     UpcomingMovie:res.data.results
                 });
@@ -56,6 +65,12 @@ class Home extends React.Component{
                 tvPopular: res.data.results,
             });
         });
+
+        // axios.get('https://api.themoviedb.org/3/movie/569094/images',config)
+        // .then(res=>{
+        //     console.log('+++++++++++++++++++++++++++++++++++++');
+        //     console.log(res);
+        // });
     }
 
 

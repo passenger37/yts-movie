@@ -23,8 +23,8 @@
 .progress-bar{
     position: relative;
     top: 250px;
-    height: 34px;
-    width: 34px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background-color: rgb(0, 255, 234);
     background:  conic-gradient(rgb(27, 214, 231) 75%, rgb(133, 133, 215) 0);
@@ -36,8 +36,8 @@
 .progress-bar::before{
     content: "";
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 34px;
+    width: 34px;
     border-radius: 50%;
     background-color: rgba(5, 15, 28, 0.929);
 
@@ -46,24 +46,5 @@
 .progress-value{
     position: relative;
     color: white;
-    font-size: 10px;
-}
-/* .progress-bar{
-    z-index: 100;
-    display: inline-block;
-    height: 34px;
-    width: 34px;
-    border-radius: 50%;
-    background: 
-      radial-gradient(closest-side, rgba(255, 255, 255, 0.568) 79%, transparent 80% 100%),
-      conic-gradient(rgb(27, 98, 231) 75%, rgb(133, 133, 215) 0);   
-} */
-
-@media (min-width: 768px) {
-    
-    .movie-card >img {
-        border-radius: 10px;
-        width:250px;
-        height:350px;
-    }
+    font-size: 12px;
 }
