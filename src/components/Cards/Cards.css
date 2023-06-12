@@ -2,3 +2,7 @@
     display:flex;
     overflow: auto;
 }
+
+.movie-cards::-webkit-scrollbar {
+    display: none;
+}

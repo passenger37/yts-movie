@@ -7,9 +7,12 @@ const SingleCard = (props) => {
     return (
         <Fragment >
             <div className='movie-card'>
+                <div class="progress-bar">
+                    <span class="progress-value">{Math.round(props.rating)*10}%</span>
+                </div>
                 <img src={`${image_300}/${props.poster}`} alt="movie_poster" width="180" height="250"/> <br/>
-                <strong>{props.title}</strong> <br />
-                <small>{props.release_date}</small>
+                <h2>{props.title}</h2> <br />
+                <p>{props.release_date}</p>
             </div>
         </Fragment>
     );
